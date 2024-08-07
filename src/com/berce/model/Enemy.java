@@ -1,6 +1,4 @@
-package com.berce.model.impl;
-
-import com.berce.model.Character;
+package com.berce.model;
 
 public class Enemy extends Character {
     private final String name;

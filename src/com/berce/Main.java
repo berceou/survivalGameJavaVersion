@@ -1,7 +1,7 @@
 package com.berce;
 
-import com.berce.model.impl.Enemy;
-import com.berce.model.impl.Hero;
+import com.berce.model.Enemy;
+import com.berce.model.Hero;
 import com.berce.service.Simulation;
 import com.berce.model.Resource;
 import com.berce.utils.InputParser;

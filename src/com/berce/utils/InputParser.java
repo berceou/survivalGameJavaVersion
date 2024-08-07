@@ -1,6 +1,6 @@
 package com.berce.utils;
-import com.berce.model.impl.Enemy;
-import com.berce.model.impl.Hero;
+import com.berce.model.Enemy;
+import com.berce.model.Hero;
 import com.berce.model.Resource;
 import java.util.ArrayList;
 import java.util.List;

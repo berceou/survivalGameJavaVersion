@@ -1,6 +1,4 @@
-package com.berce.model.impl;
-
-import com.berce.model.Character;
+package com.berce.model;
 
 public class Hero extends Character {
     public Hero(int hp, int attack) {
