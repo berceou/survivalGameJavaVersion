@@ -9,13 +9,6 @@ import com.berce.utils.InputValidator;
 import java.util.List;
 import java.util.Scanner;
 
-
-//! alforitmayı baştan kur. input1 ok ama 2de sorun var. 2de 980 olmamalı. debug et.
-//! try-catch
-//! validator - parser - error handler
-//! response düzenle
-//! dosyadan oku dosyaya yaz sonucu
-
 public class Main {
     public static void main(String[] args) {
 
