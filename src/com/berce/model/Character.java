@@ -1,11 +1,11 @@
+package com.berce.model;
+
 // Subclasses (Hero and Enemy) implement these methods in their own way.
 // Because common behavior is shown. This is why it is abstract
 public abstract class Character {
-    // protected: only subclass use
+    private int hp;
+    private final int attack;
 
-    protected int hp;
-    protected int attack;
-    //constructor: hp & attack for char
     public Character(int hp, int attack) {
         this.hp = hp;
         this.attack = attack;

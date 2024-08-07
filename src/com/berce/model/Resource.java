@@ -1,3 +1,5 @@
+package com.berce.model;
+
 public class Resource {
     private final int distance;
 
@@ -5,8 +7,7 @@ public class Resource {
         this.distance = distance;
     }
 
-    // maybe later
-    public int getDistance() {
+    public int getDistanceFromBase() {
         return distance;
     }
 }

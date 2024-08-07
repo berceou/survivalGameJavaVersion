@@ -1,6 +1,11 @@
+package com.berce.model.impl;
+
+import com.berce.model.Character;
+
 public class Enemy extends Character {
     private final String name;
     private final int position;
+
     public Enemy(String name, int hp, int attack, int position) {
         super(hp, attack);
         this.name = name;
@@ -18,7 +23,8 @@ public class Enemy extends Character {
     // If there were a different usage, enemy - hero classes would be an example of polymorphism.
     @Override
     public void attack(Character target) {
-        target.setHp(target.getHp() - this.attack);
-        this.hp -= target.getAttack();
+        target.setHp(target.getHp() - this.getAttack());
+        this.setHp(this.getHp() - target.getAttack());
     }
+
 }
