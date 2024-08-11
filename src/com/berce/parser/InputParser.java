@@ -1,7 +1,9 @@
-package com.berce.utils;
+package com.berce.parser;
+
 import com.berce.model.Enemy;
 import com.berce.model.Hero;
 import com.berce.model.Resource;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;

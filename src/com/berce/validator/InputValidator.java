@@ -1,4 +1,4 @@
-package com.berce.utils;
+package com.berce.validator;
 
 import com.berce.model.Enemy;
 import com.berce.model.Hero;

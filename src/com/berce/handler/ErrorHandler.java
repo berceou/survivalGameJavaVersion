@@ -1,4 +1,4 @@
-package com.berce.utils;
+package com.berce.handler;
 
 public class ErrorHandler {
 }
