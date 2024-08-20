@@ -7,20 +7,49 @@ Write a simulation that find outs if the hero would survive or not. You can use 
 
 ## Tech Stack
 
-**Server:** Java
+**Server:** Java, JSP
 
 ## Folder Structure
-> düzenle
 
 ```bash
 survivalGameJavaVersion/
+├── web/ # webapp files
+│   ├── WEB-INF
+│   ├──├──config.properties # env params
+│   ├──├──input_hero_lose.txt # hero lose input version
+│   ├──├──input_hero_win.txt # hero win input version
+│   ├──├──output_hero_lose.txt # hero lose output version
+│   ├──├──output_hero_win.txt # hero win output version
+│   ├── index.jsp
+│   ├── result.jsp
 ├── src/ #Source files
-│   ├── com.berce.model.Character # enemy & hero char class
-│   ├── com.berce.model.Enemy # com.berce.model.Enemy class
-│   ├── com.berce.model.Hero # com.berce.model.Hero class
-│   ├── com.berce.Main #start and listen the project. Includes text patterns
-│   ├── com.berce.model.Resource # com.berce.model.Resource class
-│   ├── com.berce.service.Simulation # com.berce.service.Simulation for desired output
+│   ├── main
+│   ├── ├── resources # input and output files for write/read process
+│   ├──├──├──config.properties # env params
+│   ├──├──├──input_hero_lose.txt # hero lose input version
+│   ├──├──├──input_hero_win.txt # hero win input version
+│   ├──├──├──output_hero_lose.txt # hero lose output version
+│   ├──├──├──output_hero_win.txt # hero win output version
+│   ├── ├── java
+│   ├──├──├──com.berce
+│   ├──├──├──├── model
+│   ├──├──├──├──├──Character # enemy & hero char properties abstract class
+│   ├──├──├──├──├── Enemy # Enemy class
+│   ├──├──├──├──├── Hero # Hero class,
+│   ├──├──├──├──├── Resource # Resource class
+│   ├──├──├──├──├── Choice # Input choice enum. 1 or 2?
+│   ├──├──├──├── service
+│   ├──├──├──├──├── Simulation # Simulation for desired output
+│   ├──├──├──├── utils
+│   ├──├──├──├──├── handler
+│   ├──├──├──├──├──├──  FileReaderHandler # Input read handler
+│   ├──├──├──├──├──├──  FileWriterHandler # Output write handler
+│   ├──├──├──├──├──  parser
+│   ├──├──├──├──├──├──  InputParser # Includes input parser for desired input schema
+│   ├──├──├──├──├──  validator
+│   ├──├──├──├──├──├──  InputValidator # Includes input validations for desired input schema
+│   ├──├──├──├── Main #start and listen the project
+│   ├── test
 ├── README.md
 ```
 
@@ -29,40 +58,24 @@ survivalGameJavaVersion/
 Clone the project
 
 ```bash
-  git clone https://github.com/bouygun/survivalGame.git
+  git clone https://github.com/bouygun/survivalGameJavaVersion.git
 ```
 
 Go to the project directory
 
 Run from com.berce.Main Class
+or
+Run with Tomcat from 8080 port
 
 ## Running Tests
 
+> ## **it's not over yet** 
 tests are missing, will be completed
 
-## API Reference
-
-#### POST
-
-```http
-  POST http://localhost:${PORT}/api/survivalGame
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `inputText`      | `string` | **Required**. all requirements |
-
-
-You can use this request, If you want to hero wins
-```
-{
-  "inputText": "Resources are 5000 meters away\nHero has 1000 hp\nHero attack is 10\nBug is com.berce.model.Enemy\nLion is com.berce.model.Enemy\nZombie is com.berce.model.Enemy\nBug has 50 hp\nBug attack is 2\nLion has 100 hp\nLion attack is 15\nZombie has 300 hp\nZombie attack is 7\nThere is a Zombie at position 1681\nThere is a Bug at position 276\nThere is a Bug at position 489\nThere is a Lion at position 1527\nThere is a Lion at position 2865\nThere is a Zombie at position 3523"
-}
-```
-
-You can use this request, If you want to enemies win
-```
-{
-  "inputText": "Resources are 7500 meters away\nHero has 500 hp\nHero attack is 9\nZombieDog is com.berce.model.Enemy\nMutant is com.berce.model.Enemy\nZombie is com.berce.model.Enemy\nMutant has 400 hp\nMutant attack is 8\nZombieDog has 75 hp\nZombieDog attack is 10\nZombie has 300 hp\nZombie attack is 7\nThere is a Zombie at position 1687\nThere is a Mutant at position 274\nThere is a ZombieDog at position 486\nThere is a ZombieDog at position 1897\nThere is a Mutant at position 5332"
-}
-```
+## Demo
+First page. You should choose an option. 
+![choice.png](img_1.png)
+If you want hero survived:
+![heroSurvived.png](img_2.png)
+Or hero dead:
+![heroDead.png](img_3.png)
